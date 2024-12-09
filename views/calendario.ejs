@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003300;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .calendar {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #003300;
+            color: white;
+            padding: 10px 20px;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+        }
+        .calendar-cell {
+            border: 1px solid #ddd;
+            height: 100px;
+            text-align: left;
+            padding: 5px;
+            vertical-align: top;
+            cursor: pointer; /* Adiciona cursor de ponteiro */
+        }
+        .calendar-cell:nth-child(1), .calendar-cell:nth-child(8), .calendar-cell:nth-child(15) {
+            background-color: #f9f9f9;
+        }
+        .nav-button {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .nav-button:hover {
+            background-color: #666;
+        }
+        .user {
+            display: flex;
+            align-items: center;
+        }
+        .user img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Cadastros</a>
+            <a href="#">Procurar</a>
+            <a href="#">Agendamentos</a>
+        </nav>
+    </header>
+    <div class="calendar">
+        <div class="calendar-header">
+            <button class="nav-button">&lt;</button>
+            <div>December 2024</div>
+            <button class="nav-button">&gt;</button>
+            <div class="user">
+                <button class="nav-button">Sair</button>
+                <img src="path-to-user-icon" alt="User  Icon">
+            </div>
+        </div>
+        <div class="calendar-grid">
+            <div class="calendar-cell"><strong>Sun</strong></div>
+            <div class="calendar-cell"><strong>Mon</strong></div>
+            <div class="calendar-cell"><strong>Tue</strong></div>
+            <div class="calendar-cell"><strong>Wed</strong></div>
+            <div class="calendar-cell"><strong>Thu</strong></div>
+            <div class="calendar-cell"><strong>Fri</strong></div>
+            <div class="calendar-cell"><strong>Sat</strong></div>
+            <% 
+                const startDay = new Date(2024, 11, 1).getDay(); // Primeiro dia do mês (0 = Domingo, 1 = Segunda, etc.)
+                const daysInMonth = new Date(2024, 12, 0).getDate(); // Total de dias no mês de Dezembro
+                for (let i = 0; i < 42; i++) { 
+            %>
+                <div class="calendar-cell" 
+                     <% if (i >= startDay && i < startDay + daysInMonth) { %>
+                         onclick="window.location.href='/agendamentos/novo?data=<%= i - startDay + 1 %>-12-2024'" 
+                     <% } %>
+                >
+                    <% if (i >= startDay && i < startDay + daysInMonth) { %>
+                        <%= i - startDay +  1 %>
+                    <% } %>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

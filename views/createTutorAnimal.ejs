@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Tutor e Animal</title>
+</head>
+<body>
+    <h1>Cadastrar Tutor e Animal</h1>
+    <form action="/tutores-e-animais" method="POST">
+        <h2>Tutor</h2>
+        <div>
+            <label for="tutorNome">Nome:</label>
+            <input type="text" id="tutorNome" name="tutor[nome]" required>
+        </div>
+        <div>
+            <label for="tutorIdade">Idade:</label>
+            <input type="number" id="tutorIdade" name="tutor[idade]" required>
+        </div>
+        <div>
+            <label for="tutorTelefone">Telefone:</label>
+            <input type="text" id="tutorTelefone" name="tutor[telefone]" required>
+        </div>
+        <div>
+            <label for="tutorCpf">CPF:</label>
+            <input type="text" id="tutorCpf" name="tutor[cpf]" required>
+        </div>
+        <div>
+            <label for="tutorEndereco">Endereço:</label>
+            <input type="text" id="tutorEndereco" name="tutor[endereco]" required>
+        </div>
+
+        <h2>Animal</h2>
+        <div>
+            <label for="animalNome">Nome:</label>
+            <input type="text" id="animalNome" name="animal[nome]" required>
+        </div>
+        <div>
+            <label for="animalEspecie">Espécie:</label>
+            <input type="text" id="animalEspecie" name="animal[especie]" required>
+        </div>
+        <div>
+            <label for="animalIdade">Idade:</label>
+            <input type="number" id="animalIdade" name="animal[idade]" required>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+    <a href="/">Voltar para a lista de tutores e animais</a>
+</body>
+</html>

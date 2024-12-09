@@ -1,0 +1,27 @@
+<!-- views/agendamento.ejs -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="/css/estilo.css"> <!-- Link para seu CSS -->
+</head>
+<body>
+    <h1>Agendar Consulta</h1>
+    <p>Data selecionada: <%= dataHora %></p>
+    <form action="/agendamentos" method="POST">
+        <input type="hidden" name="dataHora" value="<%= dataHora %>"> <!-- Passa a data selecionada -->
+        <label for="tutor">Tutor:</label>
+        <input type="text" name="tutor" required>
+        
+        <label for="animal">Animal:</label>
+        <input type="text" name="animal" required>
+        
+        <label for="motivo">Motivo:</label>
+        <input type="text" name="motivo" required>
+        
+        <button type="submit">Agendar</button>
+    </form>
+</body>
+</html>

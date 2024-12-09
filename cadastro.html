@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Agenda</title>
+
+        <link rel="stylesheet" href="./styles/estilo.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <section class="navigation-menu">
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="./cadastro.html">Cadastros</a>
+                    </li>
+                    <li>
+                        <a href="./buscar-pessoa.html">Procurar</a>
+                    </li>
+                    <li>
+                        <a href="./agenda.html">Agendamentos</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-infos">
+                <button class="botao botao-pequeno">Sair</button>
+                <div class="icon icon-pequeno">
+                    <img src="./imagens/user-icon.png" alt="" />
+                </div>
+            </div>
+        </section>
+
+        <main>
+            <section class="cadastro">
+                <form class="form-cadastro">
+                    <div class="esquerda">
+                        <div class="esquerda-input-grande">
+                            <input type="text" placeholder="Nome: " />
+                            <input st type="text" placeholder="Endereço: " />
+                        </div>
+                        <div class="inputs-pequenos-esquerda">
+                            <input type="text" placeholder="Telefone: " />
+                            <input st type="text" placeholder="CPF: " />
+                            <input st type="text" placeholder="Espécie: " />
+                        </div>
+                    </div>
+                    <div class="direita">
+                        <div class="input-direita-grande">
+                            <input type="text" placeholder="Nome do animal: " />
+                            <input
+                                type="text"
+                                placeholder="Data de nascimento: "
+                            />
+                        </div>
+                        <div class="input-direita-pequeno">
+                            <input type="text" placeholder="Sexo: " />
+                            <input type="text" placeholder="Peso: " />
+                        </div>
+                        <button class="btn-cadastro">Cadastrar</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

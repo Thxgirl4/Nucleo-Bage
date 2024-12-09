@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Tutor</title>
+</head>
+<body>
+    <h1>Buscar Tutor</h1>
+    <form action="/tutores/buscar" method="GET">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div>
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+        </div>
+        <button type="submit">Buscar</button>
+    </form>
+    <a href="/">Voltar para a lista de tutores e animais</a>
+</body>
+</html>
