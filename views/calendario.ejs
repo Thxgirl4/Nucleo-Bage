@@ -4,84 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #003300;
-            color: white;
-            padding: 10px;
-            text-align: left;
-        }
-        header nav a {
-            color: white;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        .calendar {
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #003300;
-            color: white;
-            padding: 10px 20px;
-        }
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            border: 1px solid #ddd;
-            border-collapse: collapse;
-        }
-        .calendar-cell {
-            border: 1px solid #ddd;
-            height: 100px;
-            text-align: left;
-            padding: 5px;
-            vertical-align: top;
-            cursor: pointer; /* Adiciona cursor de ponteiro */
-        }
-        .calendar-cell:nth-child(1), .calendar-cell:nth-child(8), .calendar-cell:nth-child(15) {
-            background-color: #f9f9f9;
-        }
-        .nav-button {
-            background-color: #444;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .nav-button:hover {
-            background-color: #666;
-        }
-        .user {
-            display: flex;
-            align-items: center;
-        }
-        .user img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-left: 10px;
-        }
-    </style>
+    <!-- Importar CSS e fontes -->
+    <link rel="stylesheet" href="/css/calender.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#">Cadastros</a>
-            <a href="#">Procurar</a>
-            <a href="#">Agendamentos</a>
+    <!-- Menu de Navegação -->
+    <section class="navigation-menu">
+        <nav class="menu">
+            <ul>
+                <li><a href="/tutor-e-animais/novo">Cadastros</a></li>
+                <li><a href="/tutores/buscar">Procurar</a></li>
+                <li><a href="/calendario">Agendamentos</a></li>
+            </ul>
         </nav>
-    </header>
+        <div class="menu-infos">
+            <button class="botao botao-pequeno">Sair</button>
+            <div class="icon icon-pequeno">
+                <img src="/images/user-icon.png" alt="Ícone de Usuário">
+            </div>
+        </div>
+    </section>
     <div class="calendar">
         <div class="calendar-header">
             <button class="nav-button">&lt;</button>

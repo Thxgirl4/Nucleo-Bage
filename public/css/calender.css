@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #003300;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+.calendar {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003300;
+    color: white;
+    padding: 10px 20px;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+.calendar-cell {
+    border: 1px solid #ddd;
+    height: 100px;
+    text-align: left;
+    padding: 5px;
+    vertical-align: top;
+    cursor: pointer; /* Adiciona cursor de ponteiro */
+}
+.calendar-cell:nth-child(1), .calendar-cell:nth-child(8), .calendar-cell:nth-child(15) {
+    background-color: #f9f9f9;
+}
+.nav-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.nav-button:hover {
+    background-color: #666;
+}
+.user {
+    display: flex;
+    align-items: center;
+}
+.user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 10px;
+}

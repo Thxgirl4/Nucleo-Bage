@@ -1,0 +1,200 @@
+/* Reset e Configurações Básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background: rgba(17, 92, 5, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.cabecalho img {
+    height: 100px;
+    position: absolute;
+    right: 20px;
+    bottom: -27px;
+}
+
+.cabecalho h1 {
+    font-weight: 400;
+    color: white;
+}
+
+/* Navegação */
+.navigation-menu {
+    display: flex;
+    max-height: 100px;
+    justify-content: space-between;
+    background: rgb(12, 56, 6);
+}
+
+.navigation-menu .menu ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.navigation-menu .menu a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all ease-in-out 300ms;
+}
+
+.navigation-menu .menu a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu-infos {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.menu-infos .icon-pequeno {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.icon-pequeno img {
+    width: 20px;
+}
+
+/* Botões */
+.botao {
+    background: linear-gradient(90deg, rgba(17, 92, 5, 1) 18%, rgba(8, 158, 108, 1) 77%);
+    height: 50px;
+    border: none;
+    border-radius: 29px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+.botao-pequeno {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: -20px;
+}
+
+/* Formulários */
+.form-cadastro {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    margin-top: 64px;
+}
+
+.form-cadastro input {
+    background: white;
+    border: 4px solid #39a11e;
+    padding: 15px 48px;
+    border-radius: 29px;
+    outline: none;
+    transition: all ease-in-out 100ms;
+}
+
+.form-cadastro input:focus {
+    border: 6px solid #2a6b19;
+}
+
+.btn-cadastro {
+    background: #39a11e;
+    width: 100%;
+    margin-top: 32px;
+    border: none;
+    outline: none;
+    border-radius: 29px;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+}
+
+.btn-cadastro:hover {
+    transform: scale(110%);
+    background: #2a6b19;
+}
+
+/* Inputs Grandes */
+.esquerda-input-grande,
+.input-direita-grande {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-direita-pequeno {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 50%;
+}
+
+.direita {
+    width: 50%;
+    padding: 20px;
+}
+
+/* Conclusão de Cadastro */
+.cadastro-concluido {
+    background-image: linear-gradient(to top, #87ffd0, #66e1a6, #47c27b, #29a450, #008723);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cadastro-concluido h1 {
+    font-weight: normal;
+}
+
+.cadastro-concluido a {
+    background: linear-gradient(90deg, rgba(17, 92, 5, 1) 18%, rgba(8, 158, 108, 1) 77%);
+    padding: 10px 20px;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all ease-in-out 300ms;
+}
+
+.cadastro-concluido a:hover {
+    transform: scale(110%);
+}
+
+/* Estilo Adicional */
+.cadatro {
+    background-image: linear-gradient(to top, #87ffd0, #66e1a6, #47c27b, #29a450, #008723);
+}

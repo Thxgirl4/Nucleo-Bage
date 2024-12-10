@@ -35,9 +35,24 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // Usar as rotas de usuario
 app.use('/', usuarioRoutes);
+
 // Rota para a página de login
+//app.get('/login', (req, res) => {
+   // res.render('login'); // Renderiza a view 'login.ejs'
+//});
+
+// Rota de login
 app.get('/login', (req, res) => {
-    res.render('login'); // Renderiza a view 'login.ejs'
+    const { name, senha } = req.body;
+
+    // Simulação de autenticação (substituir por lógica real)
+    if (name === 'admin' && senha === '12345') {
+        // Redirecionar para a página de cadastro ao fazer login
+        res.redirect('/tutor-e-animais/novo');
+    } else {
+        // Redirecionar de volta ao login com uma mensagem de erro
+        res.send('<script>alert("Credenciais inválidas!"); window.history.back();</script>');
+    }
 });
 
 app.use('/', tutorAnimalRoutes);

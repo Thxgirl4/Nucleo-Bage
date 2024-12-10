@@ -5,9 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento</title>
-    <link rel="stylesheet" href="/css/estilo.css"> <!-- Link para seu CSS -->
+    
+     <!-- Importar CSS e fontes -->
+     <link rel="stylesheet" href="/css/agenda.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+      <!-- Menu de Navegação -->
+    <section class="navigation-menu">
+        <nav class="menu">
+            <ul>
+                <li><a href="/tutor-e-animais/novo">Cadastros</a></li>
+                <li><a href="/tutores/buscar">Procurar</a></li>
+                <li><a href="/calendario">Agendamentos</a></li>
+            </ul>
+        </nav>
+        <div class="menu-infos">
+            <button class="botao botao-pequeno">Sair</button>
+            <div class="icon icon-pequeno">
+                <img src="/images/user-icon.png" alt="Ícone de Usuário">
+            </div>
+        </div>
+    </section>
+
     <h1>Agendar Consulta</h1>
     <p>Data selecionada: <%= dataHora %></p>
     <form action="/agendamentos" method="POST">

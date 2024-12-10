@@ -52,31 +52,16 @@ router.get('/login', (req, res) => {
 });
 
 // Rota para processar o login
-router.post('/login', async (req, res) => {
+router.post('/login', (req, res) => {
     const { name, senha } = req.body;
 
-    try {
-        // Encontrar o usuário pelo nome
-        const usuario = await Usuario.findOne({ name });
-
-        // Se o usuário não for encontrado
-        if (!usuario) {
-            return res.status(401).send('Usuário ou senha inválidos');
-        }
-
-        // Verificar se a senha está correta
-        const senhaCorreta = await bcrypt.compare(senha, usuario.senha);
-
-        if (senhaCorreta) {
-            // Redirecionar para a página principal ou dashboard
-            res.redirect('/'); // ou outra rota
-        } else {
-            // Se a senha estiver incorreta
-            res.status(401).send('Usuário ou senha inválidos');
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).send('Erro ao processar o login');
+    // Simulação de autenticação (substituir por lógica real)
+    if (name === 'Atendente' && senha === 'nucleovet78') {
+        // Redirecionar para a página de cadastro ao fazer login
+        res.redirect('/tutor-e-animais/novo');
+    } else {
+        // Redirecionar de volta ao login com uma mensagem de erro
+        res.send('<script>alert("Credenciais inválidas!"); window.history.back();</script>');
     }
 });
 

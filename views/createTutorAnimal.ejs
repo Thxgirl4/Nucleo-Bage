@@ -4,48 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Tutor e Animal</title>
+
+    <!-- Importar CSS e fontes -->
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Cadastrar Tutor e Animal</h1>
-    <form action="/tutores-e-animais" method="POST">
-        <h2>Tutor</h2>
-        <div>
-            <label for="tutorNome">Nome:</label>
-            <input type="text" id="tutorNome" name="tutor[nome]" required>
+    <!-- Menu de Navegação -->
+    <section class="navigation-menu">
+        <nav class="menu">
+            <ul>
+                <li><a href="/tutor-e-animais/novo">Cadastros</a></li>
+                <li><a href="/tutores/buscar">Procurar</a></li>
+                <li><a href="/calendario">Agendamentos</a></li>
+            </ul>
+        </nav>
+        <div class="menu-infos">
+            <button class="botao botao-pequeno">Sair</button>
+            <div class="icon icon-pequeno">
+                <img src="/images/user-icon.png" alt="Ícone de Usuário">
+            </div>
         </div>
-        <div>
-            <label for="tutorIdade">Idade:</label>
-            <input type="number" id="tutorIdade" name="tutor[idade]" required>
-        </div>
-        <div>
-            <label for="tutorTelefone">Telefone:</label>
-            <input type="text" id="tutorTelefone" name="tutor[telefone]" required>
-        </div>
-        <div>
-            <label for="tutorCpf">CPF:</label>
-            <input type="text" id="tutorCpf" name="tutor[cpf]" required>
-        </div>
-        <div>
-            <label for="tutorEndereco">Endereço:</label>
-            <input type="text" id="tutorEndereco" name="tutor[endereco]" required>
-        </div>
+    </section>
 
-        <h2>Animal</h2>
-        <div>
-            <label for="animalNome">Nome:</label>
-            <input type="text" id="animalNome" name="animal[nome]" required>
-        </div>
-        <div>
-            <label for="animalEspecie">Espécie:</label>
-            <input type="text" id="animalEspecie" name="animal[especie]" required>
-        </div>
-        <div>
-            <label for="animalIdade">Idade:</label>
-            <input type="number" id="animalIdade" name="animal[idade]" required>
-        </div>
-
-        <button type="submit">Cadastrar</button>
-    </form>
-    <a href="/">Voltar para a lista de tutores e animais</a>
+    <!-- Formulário Principal -->
+    <main>
+        <section class="cadastro">
+            <h1>Cadastrar Tutor e Animal</h1>
+            <form class="form-cadastro" action="/tutores-e-animais" method="POST">
+                <div class="esquerda">
+                    <h2>Tutor</h2>
+                    <div class="esquerda-input-grande">
+                        <input type="text" id="tutorNome" name="tutor[nome]" placeholder="Nome" required>
+                        <input type="text" id="tutorEndereco" name="tutor[endereco]" placeholder="Endereço" required>
+                    </div>
+                    <div class="inputs-pequenos-esquerda">
+                        <input type="text" id="tutorTelefone" name="tutor[telefone]" placeholder="Telefone" required>
+                        <input type="text" id="tutorCpf" name="tutor[cpf]" placeholder="CPF" required>
+                    </div>
+                </div>
+                <div class="direita">
+                    <h2>Animal</h2>
+                    <div class="input-direita-grande">
+                        <input type="text" id="animalNome" name="animal[nome]" placeholder="Nome do animal" required>
+                        <input type="text" id="animalEspecie" name="animal[especie]" placeholder="Espécie" required>
+                    </div>
+                    <div class="input-direita-pequeno">
+                        <input type="text" id="animalIdade" name="animal[idade]" placeholder="Idade" required>
+                        <input type="text" id="animalSexo" name="animal[sexo]" placeholder="Sexo" required>
+                        <input type="text" id="animalPeso" name="animal[peso]" placeholder="Peso" required>
+                    </div>
+                    <button class="btn-cadastro" type="submit">Cadastrar</button>
+                </div>
+            </form>
+            <a href="/"></a>
+        </section>
+    </main>
 </body>
 </html>

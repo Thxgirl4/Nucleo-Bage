@@ -1,0 +1,76 @@
+.botao {
+    background: rgb(17, 92, 5);
+    background: linear-gradient(
+        90deg,
+        rgba(17, 92, 5, 1) 18%,
+        rgba(8, 158, 108, 1) 77%
+    );
+    height: 50px;
+    border: none;
+    border-radius: 29px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+.navigation-menu {
+    display: flex;
+    max-height: 100px;
+    justify-content: space-between;
+    background: rgb(12, 56, 6);
+}
+
+.icon-pequeno img {
+    width: 20px;
+}
+
+.menu-infos {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.menu-infos .icon-pequeno {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.botao-pequeno {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: -20px;
+}
+
+.navigation-menu .menu ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    list-style-type: none;
+    gap: 20px;
+    padding: 0 20px;
+    font-family: "Montserrat";
+}
+
+.navigation-menu .menu a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all ease-in-out 300ms;
+}
+
+.navigation-menu .menu a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 24px;
+}
+.agenda {
+    background: linear-gradient(
+        90deg,
+        rgba(17, 92, 5, 1) 18%,
+        rgba(8, 158, 108, 1) 77%
+    );
+}
