@@ -28,9 +28,9 @@
     <section class="navigation-menu">
         <nav class="menu">
             <ul>
-                <li><a href="/tutor-e-animais/novo">Cadastros</a></li>
+                <li><a href="/tutores-e-animais/novo">Cadastros</a></li>
                 <li><a href="/tutores/buscar">Procurar</a></li>
-                <li><a href="#">Agendamentos</a></li>
+                <li><a href="#">Agendar</a></li>
             </ul>
         </nav>
         <div class="menu-infos">
@@ -53,16 +53,20 @@
             <form action="/agendamentos" method="POST">
                 <p>Data selecionada: <span id="selectedDate">Nenhuma data selecionada</span></p>
                 <input type="hidden" id="dataHora" name="dataHora" required>
-
-                <label for="tutor">Tutor:</label>
-                <input type="text" id="tutor" name="tutor" required>
-
-                <label for="animal">Animal:</label>
-                <input type="text" id="animal" name="animal" required>
-
-                <label for="motivo">Motivo:</label>
-                <input type="text" id="motivo" name="motivo" required>
-
+                
+                <div class="">
+                    <label for="tutor">Nome do Tutor:</label>
+                    <input type="text" id="tutor" name="tutor" placeholder="Nome do tutor" required>
+                </div>
+                <div class="">
+                    <label for="animal">Nome do Animal:</label>
+                    <input type="text" id="animal" name="animal" placeholder="Nome do animal" required>
+                </div>
+                <div class="">
+                    <label for="motivo">Motivo do Agendamento:</label>
+                    <input type="text" id="motivo" name="motivo" placeholder="Motivo do agendamento" required>
+                </div>
+                
                 <button type="submit">Criar Agendamento</button>
             </form>
         </section>
