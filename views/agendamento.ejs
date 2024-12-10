@@ -1,25 +1,36 @@
-<!-- views/agendamento.ejs -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento</title>
-    
-     <!-- Importar CSS e fontes -->
-     <link rel="stylesheet" href="/css/agenda.css">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Importar CSS e fontes -->
+    <link rel="stylesheet" href="/css/agenda.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var calendarEl = document.getElementById("calendar");
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: "dayGridMonth",
+            });
+            calendar.render();
+        });
+    </script>
 </head>
 <body>
-      <!-- Menu de Navegação -->
+    <!-- Menu de Navegação -->
     <section class="navigation-menu">
         <nav class="menu">
             <ul>
                 <li><a href="/tutor-e-animais/novo">Cadastros</a></li>
                 <li><a href="/tutores/buscar">Procurar</a></li>
-                <li><a href="/calendario">Agendamentos</a></li>
+                <li><a href="#">Agendamentos</a></li>
             </ul>
         </nav>
         <div class="menu-infos">
@@ -30,20 +41,31 @@
         </div>
     </section>
 
-    <h1>Agendar Consulta</h1>
-    <p>Data selecionada: <%= dataHora %></p>
-    <form action="/agendamentos" method="POST">
-        <input type="hidden" name="dataHora" value="<%= dataHora %>"> <!-- Passa a data selecionada -->
-        <label for="tutor">Tutor:</label>
-        <input type="text" name="tutor" required>
-        
-        <label for="animal">Animal:</label>
-        <input type="text" name="animal" required>
-        
-        <label for="motivo">Motivo:</label>
-        <input type="text" name="motivo" required>
-        
-        <button type="submit">Agendar</button>
-    </form>
+    <!-- Calendário e Formulário -->
+    <main>
+        <section class="agenda">
+            <div id="calendar"></div>
+        </section>
+
+        <section class="formulario-agendamento">
+            <h1>Agendar Consulta</h1>
+
+            <form action="/agendamentos" method="POST">
+                <p>Data selecionada: <span id="selectedDate">Nenhuma data selecionada</span></p>
+                <input type="hidden" id="dataHora" name="dataHora" required>
+
+                <label for="tutor">Tutor:</label>
+                <input type="text" id="tutor" name="tutor" required>
+
+                <label for="animal">Animal:</label>
+                <input type="text" id="animal" name="animal" required>
+
+                <label for="motivo">Motivo:</label>
+                <input type="text" id="motivo" name="motivo" required>
+
+                <button type="submit">Criar Agendamento</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>

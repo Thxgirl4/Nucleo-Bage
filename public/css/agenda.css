@@ -1,5 +1,5 @@
 .botao {
-    background: rgb(17, 92, 5);
+    background: rgb(3, 49, 3);
     background: linear-gradient(
         90deg,
         rgba(17, 92, 5, 1) 18%,
@@ -70,7 +70,7 @@
 .agenda {
     background: linear-gradient(
         90deg,
-        rgba(17, 92, 5, 1) 18%,
-        rgba(8, 158, 108, 1) 77%
+        rgb(237, 240, 237) 18%,
+        rgb(248, 248, 248) 77%
     );
 }

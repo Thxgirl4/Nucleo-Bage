@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busca de Tutores</title>
+
+    <link rel="stylesheet" href="/css/procurar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <section class="navigation-menu">
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="/tutores/cadastro">Cadastros</a>
+                </li>
+                <li>
+                    <a href="/tutores/buscar">Procurar</a>
+                </li>
+                <li>
+                    <a href="/tutores/agendamentos">Agendamentos</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menu-infos">
+            <button class="botao botao-pequeno">Sair</button>
+            <div class="icon icon-pequeno">
+                <img src="/images/user-icon.png" alt="User  Icon" />
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="login">
+            <form action="/tutores/buscar" method="GET" class="login-form">
+                <label for="nome">
+                    NOME:
+                    <input type="text" name="nome" placeholder="Fulano de tal" />
+                </label>
+                <label for="cpf">
+                    CPF:
+                    <input type="text" name="cpf" placeholder="000.000.000-00" />
+                </label>
+                <button type="submit" class="botao">Procurar</button>
+            </form>
+        </section>
+
+        <% if (tutor) { %>
+            <section class="resultado">
+                <h2>Resultado da Busca</h2>
+                <p><strong>Nome:</strong> <%= tutor.nome %></p>
+                <p><strong>CPF:</strong> <%= tutor.cpf %></p>
+            </section>
+        <% } else if (error) { %>
+            <section class="resultado">
+                <h2>Erro</h2>
+                <p><%= error %></p>
+            </section>
+        <% } %>
+    </main>
+</body>
+</html>

@@ -8,7 +8,9 @@ export const createAgendamento = async (req, res) => {
     try {
         const novoAgendamento = new Agendamento({ dataHora, tutor, animal, motivo });
         await novoAgendamento.save(); // Salva o agendamento no banco de dados
-        res.redirect('/agendamentos'); // Redireciona para a lista de agendamentos ou outra página
+
+        // Renderiza a view de agendamento após a criação
+        res.render('agendamento', { message: 'Agendamento criado com sucesso!' }); // Passa a mensagem de sucesso
     } catch (error) {
         console.error('Erro ao criar agendamento:', error);
         res.status(500).send('Erro ao criar agendamento.'); // Retorna um erro se a criação falhar

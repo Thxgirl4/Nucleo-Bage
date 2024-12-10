@@ -1,0 +1,103 @@
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Estilos para o menu de navegação */
+.navigation-menu {
+    display: flex;
+    max-height: 100px;
+    justify-content: space-between;
+    background: rgb(12, 56, 6);
+}
+
+.menu-infos {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.botao {
+    background: rgb(17, 92, 5);
+    background: linear-gradient(
+        90deg,
+        rgba(17, 92, 5, 1) 18%,
+        rgba(8, 158, 108, 1) 77%
+    );
+    height: 50px;
+    border: none;
+    border-radius: 29px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+.botao-pequeno {
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: -20px;
+}
+
+/* continuar o estilo no procurar.css */
+
+.login {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login input {
+    height: 50px;
+    width: 300px;
+    font-size: 20px;
+    color: gray;
+    text-align: center;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 29px;
+}
+
+.login button {
+    background: rgb(17, 92, 5);
+    background: linear-gradient(90deg, rgba(17, 92, 5, 1) 18%, rgba(8, 158, 108, 1) 77%);
+    height: 50px;
+    border: none;
+    border-radius: 29px;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: block;
+}
+
+.icon-pequeno img {
+    width: 20px;
+}
+
+/* Estilos para a seção de resultado */
+.resultado {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}

@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import usuarioRoutes from './routes/usuarioRoutes.js';
 import tutorAnimalRoutes from './routes/tutorAnimalRoutes.js';
 import agendamentoRoutes from './routes/agendamentoRoutes.js';
+import tutorRoutes from './routes/tutorRoutes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -41,23 +42,10 @@ app.use('/', usuarioRoutes);
    // res.render('login'); // Renderiza a view 'login.ejs'
 //});
 
-// Rota de login
-app.get('/login', (req, res) => {
-    const { name, senha } = req.body;
-
-    // Simulação de autenticação (substituir por lógica real)
-    if (name === 'admin' && senha === '12345') {
-        // Redirecionar para a página de cadastro ao fazer login
-        res.redirect('/tutor-e-animais/novo');
-    } else {
-        // Redirecionar de volta ao login com uma mensagem de erro
-        res.send('<script>alert("Credenciais inválidas!"); window.history.back();</script>');
-    }
-});
-
 app.use('/', tutorAnimalRoutes);
 
 app.use('/', agendamentoRoutes);
+app.use('/', tutorRoutes);
 // Iniciar o servidor
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
