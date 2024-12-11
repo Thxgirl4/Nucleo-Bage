@@ -12,14 +12,13 @@ import { fileURLToPath } from 'url';
 
 const app = express();
 
-// Obter o diretório atual
+// para obter o diretório atual
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.static('public')); 
 const PORT = process.env.PORT || 3000;
 
 
@@ -28,14 +27,12 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Conexão com o MongoDB Atlas
+// conexão com o MongoDB Atlas
 const uri = "mongodb+srv://anacastrobg001:Ta99poh0k5jbfntf@cluster0.2kjeg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('Conectado ao MongoDB Atlas'))
     .catch(err => console.error('Erro ao conectar ao MongoDB Atlas', err));
 
-// Usar as rotas de usuario
-app.use('/', usuarioRoutes);
 
 // Rota para a página de login
 //app.get('/login', (req, res) => {
@@ -43,10 +40,11 @@ app.use('/', usuarioRoutes);
 //});
 
 app.use('/', tutorAnimalRoutes);
-
+app.use('/', usuarioRoutes);
 app.use('/', agendamentoRoutes);
 app.use('/', tutorRoutes);
-// Iniciar o servidor
+
+// iniciar o servidor usando a porta 3000
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
