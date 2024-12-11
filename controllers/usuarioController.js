@@ -1,11 +1,11 @@
 // controllers/usuarioController.js
-import Usuario from '../models/usuarioModel.js'; // Use a sintaxe de importação ES6 e adicione a extensão .js
+import Usuario from '../models/usuarioModel.js'; 
 
 // Criar um novo usuario
 export const createUsuario = async (req, res) => {
     try {
-        const usuario = new Usuario(req.body); // Corrigido para usar 'usuario' em vez de 'Usuario'
-        await usuario.save(); // Corrigido para usar 'usuario' em vez de 'Usuario'
+        const usuario = new Usuario(req.body); 
+        await usuario.save();
         res.status(201).send(usuario);
     } catch (error) {
         res.status(400).send(error);
@@ -15,7 +15,7 @@ export const createUsuario = async (req, res) => {
 // Deletar um usuario
 export const deleteUsuario = async (req, res) => {
     try {
-        const usuario = await Usuario.findByIdAndDelete(req.params.id); // Corrigido para usar 'Usuario' em vez de 'Item'
+        const usuario = await Usuario.findByIdAndDelete(req.params.id); 
         if (!usuario) {
             return res.status(404).send();
         }

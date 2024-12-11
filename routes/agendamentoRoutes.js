@@ -4,18 +4,19 @@ import { createAgendamento, getAgendamentos, renderAgendamento } from '../contro
 
 const router = express.Router();
 
-// Rota para renderizar o calendário
+/* Rota para renderizar o calendário
 router.get('/calendario', (req, res) => {
     res.render('calendario'); // Renderiza a view 'calendario.ejs'
 });
+*/
 
-// Rota para criar um novo agendamento
+// criar agendaamento de consulta
 router.get('/agendamentos', renderAgendamento);
 
-// Rota para listar todos os agendamentos
+// listar agendamentos existentes 
 router.get('/agendamentos', getAgendamentos);
 
-//Rota para renderizar a tela de agendamento
+// renderiza a tela de agendamento
 router.post('/agendamentos', createAgendamento);
 
 export default router;

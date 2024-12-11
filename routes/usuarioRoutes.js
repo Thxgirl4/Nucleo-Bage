@@ -4,6 +4,7 @@ import Usuario from '../models/usuarioModel.js'; // Ajuste o caminho conforme ne
 import bcrypt from 'bcrypt';
 
 const router = express.Router();
+/* rotas para implementar futuramente
 
 // Rota para exibir a página de gerenciamento de usuários
 router.get('/', async (req, res) => {
@@ -44,6 +45,7 @@ router.delete('/:id', async (req, res) => {
         res.status(500).send('Erro ao deletar usuário');
     }
 });
+*/
 
 // Rota para exibir a tela de login
 router.get('/login', (req, res) => {
