@@ -10,7 +10,7 @@ router.get('/calendario', (req, res) => {
 });
 
 // Rota para criar um novo agendamento
-router.get('/agendamentos/novo', renderAgendamento);
+router.get('/agendamentos', renderAgendamento);
 
 // Rota para listar todos os agendamentos
 router.get('/agendamentos', getAgendamentos);

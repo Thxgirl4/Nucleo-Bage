@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Cadastro</title>
+
+    <!-- Importar CSS e fontes -->
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menu de Navegação -->
+    <section class="navigation-menu">
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Cadastros</a></li>
+                <li><a href="/tutores/buscar">Procurar</a></li>
+                <li><a href="/agendamentos/novo">Agenda</a></li>
+            </ul>
+        </nav>
+        <div class="menu-infos">
+            <button class="botao botao-pequeno">Sair</button>
+            <div class="icon icon-pequeno">
+                <img src="/images/user-icon.png" alt="Ícone de Usuário">
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmação Principal -->
+    <main>
+        
+        <section class="cadastro">
+            <h1>Cadastro Realizado com Sucesso!</h1>
+            <p>O tutor <strong><%= tutor %></strong> e o animal <strong><%= animal %></strong> foram cadastrados com sucesso.</p>
+    
+            <a href="/tutores-e-animais/novo" class="btn-cadastro">Cadastrar outro tutor e animal</a>
+            <a href="/tutores-e-animais" class="btn-cadastro">Voltar para a lista de tutores e animais</a>
+        </section>
+    </main>
+</body>
+</html>
